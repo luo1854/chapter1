@@ -1,0 +1,15 @@
+Caused by: java.util.zip.ZipException: invalid LOC header (bad signature)
+	at java.util.zip.ZipFile.read(Native Method)
+	at java.util.zip.ZipFile.access$1400(Unknown Source)
+	at java.util.zip.ZipFile$ZipFileInputStream.read(Unknown Source)
+	at java.util.zip.ZipFile$ZipFileInflaterInputStream.fill(Unknown Source)
+	at java.util.zip.InflaterInputStream.read(Unknown Source)
+	at sun.misc.IOUtils.readFully(Unknown Source)
+	at java.util.jar.JarFile.getBytes(Unknown Source)
+	at java.util.jar.JarFile.getManifestFromReference(Unknown Source)
+	at java.util.jar.JarFile.getManifest(Unknown Source)
+	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.initInternal(AbstractSingleArchiveResourceSet.java:111)
+	... 34 more
+	
+---> maven 下载的包有问题，删掉本地的包，然后重新下载即可。
+耗时一天解决
